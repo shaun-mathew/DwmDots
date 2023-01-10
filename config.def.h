@@ -244,7 +244,7 @@ static const Layout layouts[] = {
 	{ MODKEY,                       KEY,      comboview,      {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
 	{ MODKEY|ShiftMask,             KEY,      combotag,       {.ui = 1 << TAG} }, \
-	{ MODKEY|Mod1Mask, KEY,      toggletag,      {.ui = 1 << TAG} },
+	{ MODKEY|Mod1Mask, KEY,      toggletag,      {.ui = 1 << TAG} }, \
 
 
 
@@ -304,8 +304,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_f,          togglefullscreen,       {0} },
 	{ MODKEY,                       XK_o,      focusmon,               {.i = -1 } },
 	{ MODKEY,                       XK_i,     focusmon,               {.i = +1 } },
-	{ MODKEY|ShiftMask,  XK_i,      tagswapmon,             {.i = +1 } },
-	{ MODKEY|ShiftMask,  XK_o,     tagswapmon,             {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_o,  tagmon,         {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_i, tagmon,         {.i = +1 } },
 
   /* Media Keys */
   {0, XF86XK_AudioLowerVolume, spawn, SHCMD("amixer set Master 5%-; pkill -RTMIN+10 dwmblocks")},
