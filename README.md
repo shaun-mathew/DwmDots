@@ -1,0 +1,2 @@
+# DwmDots
+My Dwm Config
