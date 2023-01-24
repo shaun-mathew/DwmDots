@@ -1,0 +1,10 @@
+config.def.h.orig
+config.def.h.rej
+config.h
+drw.c.orig
+drw.c.rej
+drw.o
+dwm
+dwm.c.rej
+dwm.o
+util.o
