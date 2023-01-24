@@ -275,6 +275,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("$HOME/.config/rofi/launchers/launcher_switch.sh") },
 	{ MODKEY,                       XK_r,      spawn,          SHCMD("$HOME/.config/rofi/launchers/launcher.sh") },
 	{ MODKEY,             XK_Return,     spawn,                  {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_a,     spawn,                  SHCMD("autorandr --change && ~/.fehbg") },
 	{ MODKEY,           XK_BackSpace,      focusmaster,            {0} },
 	{ MODKEY,                       XK_j,          focusstack,             {.i = +1 } },
 	{ MODKEY,                       XK_k,          focusstack,             {.i = -1 } },
@@ -306,6 +307,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_i,     focusmon,               {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_o,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_i, tagmon,         {.i = +1 } },
+	{ MODKEY|ControlMask,  XK_o,  tagswapmon,     {.i = +1 } },
+	{ MODKEY|ControlMask,  XK_i, tagswapmon,     {.i = -1 } },
 
   /* Media Keys */
   {0, XF86XK_AudioLowerVolume, spawn, SHCMD("amixer set Master 5%-; pkill -RTMIN+10 dwmblocks")},
